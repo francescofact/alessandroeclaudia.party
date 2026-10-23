@@ -13,8 +13,39 @@
   
   <link rel="stylesheet" crossorigin="" href="./index_files/index-CBDTt-k8.css">
   <style>
-    /* Smooth scrolling & clean modal styling */
+    /* Smooth scrolling */
     html { scroll-behavior: smooth; }
+
+    /* Responsive Navbar with explicit styles */
+    .nav-desktop {
+      display: none;
+    }
+    .nav-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (min-width: 860px) {
+      .nav-desktop {
+        display: flex !important;
+        align-items: center;
+        gap: 1.75rem;
+      }
+      .nav-desktop a {
+        display: inline-block;
+        padding: 0.25rem 0.25rem;
+        white-space: nowrap;
+      }
+      .nav-toggle {
+        display: none !important;
+      }
+    }
+
+    /* Modal styling */
     .modal-backdrop {
       display: none;
       position: fixed;
@@ -50,7 +81,8 @@
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <a href="#hero" class="font-display text-xl tracking-wide text-gold">Alessandro &amp; Claudia</a>
           
-          <div class="hidden md:flex items-center gap-7 text-xs tracking-[0.2em] uppercase font-body text-muted-foreground">
+          <!-- Desktop Navigation -->
+          <div class="nav-desktop text-xs tracking-[0.2em] uppercase font-body text-muted-foreground">
             <a href="#kuppelraum" class="hover:text-gold transition-colors">The Dome</a>
             <a href="#bar" class="hover:text-gold transition-colors">The Bar</a>
             <a href="#raucherzimmer" class="hover:text-gold transition-colors">The Lounge</a>
@@ -60,12 +92,15 @@
             <a href="#kontakt" class="hover:text-gold transition-colors">Details</a>
           </div>
 
-          <button id="mobile-toggle" class="md:hidden text-foreground" aria-label="Menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-toggle" class="nav-toggle text-foreground p-1 hover:text-gold transition-colors" aria-label="Menu">
+            <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-background/95 backdrop-blur-md border-b border-border">
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden bg-background/95 backdrop-blur-md border-b border-border">
           <ul class="flex flex-col items-center gap-4 py-6 text-xs tracking-[0.2em] uppercase font-body">
             <li><a href="#kuppelraum" class="text-muted-foreground hover:text-gold transition-colors mobile-link">The Dome Room</a></li>
             <li><a href="#bar" class="text-muted-foreground hover:text-gold transition-colors mobile-link">The Bar</a></li>
@@ -124,7 +159,7 @@
               <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Flying dinner &amp; evening dance floor</li>
               <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Iconic 1950s monumental cupola architecture</li>
             </ul>
-            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body" data-floor="kuppelraum">
+            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body cursor-pointer" data-floor="kuppelraum">
               Floor Plans &amp; Details
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </button>
@@ -153,7 +188,7 @@
               <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>DJ booth &amp; sound setup</li>
               <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Direct spiral staircase access up to the Dome Room</li>
             </ul>
-            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body" data-floor="bar">
+            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body cursor-pointer" data-floor="bar">
               Floor Plans &amp; Details
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </button>
@@ -182,7 +217,7 @@
               <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Welcome reception &amp; coat check area</li>
               <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Quiet haven for conversations away from the dance floor</li>
             </ul>
-            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body" data-floor="lounge">
+            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body cursor-pointer" data-floor="lounge">
               Floor Plans &amp; Details
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </button>
@@ -349,12 +384,29 @@
     // Navigation toggle
     const toggleBtn = document.getElementById('mobile-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
     if (toggleBtn && mobileMenu) {
       toggleBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        const isClosed = mobileMenu.classList.contains('hidden');
+        if (isClosed) {
+          mobileMenu.classList.remove('hidden');
+          if (iconMenu) iconMenu.classList.add('hidden');
+          if (iconClose) iconClose.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          if (iconMenu) iconMenu.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
+        }
       });
+
       document.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (iconMenu) iconMenu.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
+        });
       });
     }
 
