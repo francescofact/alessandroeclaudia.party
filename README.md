@@ -1,104 +1,75 @@
-# Alessandro & Claudia — Post-Wedding Party über den Dächern Berlins
+# Alessandro & Claudia — Post-Wedding Celebration
 
-Eine elegante, maßgeschneiderte Klon-Adaption der Website von [Lounge im Turm](https://lounge-im-turm.de/), umgestaltet für die private Hochzeitsfeier mit Freunden von **Alessandro & Claudia**.
+An elegant, bespoke website adaptation of [Lounge im Turm](https://lounge-im-turm.de/), customized for the post-wedding party with friends of **Alessandro & Claudia**.
 
 ---
 
-## 🏛️ Über das Event
+## 🏛️ Event Details
 
-- **Anlass:** Post-Wedding Party mit Freunden
-- **Brautpaar:** Alessandro & Claudia
-- **Datum:** Samstag, 19. September 2026
-- **Uhrzeit:** Ab 18:30 Uhr (Sunset Drinks) bis Open End
-- **Location:** Lounge im Turm · Frankfurter Tor 9, 10243 Berlin (Friedrichshain)
-- **Die Ebenen:**
-  - **Ebene 15 (Kuppelraum):** 360°-Panorama, Außenbalkon, Flying Dinner & Tanzfläche unter der Kuppel
-  - **Ebene 14 (Die Bar):** Designer-Bar, DJ-Pult, Open Bar mit Signature Drinks (u.a. Claudias Spritz & Alessandros Negroni)
-  - **Ebene 13 (Die Loungeetage):** Chesterfield-Ledersessel, Polaroid-Gästebuch, Fotoecke & entspannter Rückzugsort
+- **Occasion:** Post-Wedding Celebration with Friends
+- **Couple:** Alessandro & Claudia
+- **Date:** Saturday, September 19, 2026
+- **Time:** From 6:30 PM (Sunset Drinks) until Late
+- **Venue:** Lounge im Turm · Frankfurter Tor 9, 10243 Berlin (Friedrichshain)
+- **The Levels:**
+  - **Level 15 (The Dome Room):** 360° panorama, outdoor terrace, flying dinner & dance floor under the historic cupola
+  - **Level 14 (The Bar):** Designer cocktail bar, DJ booth, and open bar with custom signature cocktails
+  - **Level 13 (The Lounge Floor):** Chesterfield leather armchairs, Polaroid photo corner, guestbook & relaxed retreat
 
 ---
 
 ## ✨ Features
 
-- **1:1 Ästhetik des Originals:**
-  - Authentische Farbpalette: Royal Blue Gradient (`#1d3463` bis `#0c1831`) und edle Gold-Akzente (`hsl(38 65% 55%)`)
-  - Typografie: *Cormorant Garamond* (Headings) und *Outfit* (Body)
-  - Alle Original-Fotografien und Henselmann-Turmillustrationen in hoher Auflösung integriert
-- **Mehrsprachigkeit (DE / EN / IT):**
-  - Integrierter 1-Klick-Sprachwechsler (Deutsch, Englisch, Italienisch) für alle Freunde und Familie
-- **Live-Countdown:**
-  - Echtzeit-Zähler bis zum 19. September 2026, 18:30 Uhr
-- **Interaktiver Grundriss-Viewer (Modal):**
-  - Schneller Wechsel zwischen Ebene 15, Ebene 14 und Ebene 13 inklusive Belegungsbeispielen direkt im Overlay
-- **Separater Detailseiten-Modus:**
-  - `kuppelraum.html`, `bar.html`, `raucherzimmer.html`, `impressum.html` spiegeln die Originalseitenstruktur wider
-- **Interaktives RSVP-Formular:**
-  - Erfassung von Zusage, Begleitperson (+1), Ernährungsformen (Omnivor, Vegetarisch, Vegan), Allergien, DJ-Songwunsch und persönlicher Nachricht
-  - Automatische lokale Speicherung im Browser + Vorbereitung einer vorformatierten E-Mail
-- **Kalender-Integration (.ics & Google Calendar):**
-  - Download einer `.ics`-Datei oder direkter Import in den Google Kalender per Klick
-- **Anfahrt & Lageplan:**
-  - Integrierter interaktiver Google-Maps-Lageplan am Frankfurter Tor 9
-  - Angaben zu ÖPNV (U5 Frankfurter Tor direkt vor der Tür, Tram M10, S-Bahn Warschauer Str.) und Parken (Kino Kosmos)
+- **1:1 Authentic Aesthetic:**
+  - Original color palette: Royal Blue Gradient (`#1d3463` to `#0c1831`) paired with warm gold accents (`hsl(38 65% 55%)`)
+  - Typography: *Cormorant Garamond* (Headings) and *Outfit* (Body)
+  - High-resolution original photography of the tower, rooms, and historic Henselmann architecture
+- **Clean Responsive Navbar:**
+  - Full desktop menu with spacious link layout
+  - Smooth mobile hamburger menu toggle
+- **Interactive Floor Plans Modal:**
+  - Seamless overlay to view seating and event configurations across Level 15, Level 14, and Level 13
+- **Google Form RSVP Integration:**
+  - Direct 1-click link to the Google RSVP form
+- **Location & Travel Info:**
+  - Embedded Google Map of Frankfurter Tor 9
+  - Public transit (U-Bahn U5 directly in front of the tower, Tram M10, S-Bahn Warschauer Str.) and parking (Kino Kosmos garage)
 
 ---
 
-## 🚀 Schnellstart / Lokal ansehen
+## 🚀 View Locally
 
-Die Website ist komplett statisch und benötigt keine Build-Tools.
+The website is 100% static and requires no build pipeline.
 
-### Option 1: Direkt im Browser öffnen
-Doppelklicke einfach auf `index.html` oder führe im Terminal aus:
+### Option 1: Open directly in your browser
+Double-click `index.html` or run:
 ```bash
 open index.html
 ```
 
-### Option 2: Lokaler Webserver (Python)
+### Option 2: Local Python web server
 ```bash
 python3 -m http.server 3000
 ```
-Öffne anschließend [http://localhost:3000](http://localhost:3000) im Browser.
-
-### Option 3: Node / npm
-```bash
-npm start
-```
+Then visit [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 🌐 Deployment (z.B. GitHub Pages oder Vercel)
-
-### GitHub Pages
-1. Repository zu GitHub pushen
-2. In den Repository-Einstellungen unter **Pages** den Branch `main` und Root `/` auswählen
-3. Die Seite ist sofort online unter `https://<username>.github.io/<repo>/`
-
-### Vercel / Netlify
-Einfach das Repository verknüpfen. Da es sich um eine statische Seite handelt, wird sie ohne zusätzliche Konfiguration automatisch bereitgestellt.
-
----
-
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```
-├── index.html                   # Haupt-Landingpage mit allen Sektionen & Interaktionen
-├── kuppelraum.html              # Detailseite Kuppelraum (Ebene 15)
-├── bar.html                     # Detailseite Bar (Ebene 14)
-├── raucherzimmer.html           # Detailseite Loungeetage (Ebene 13)
-├── impressum.html               # Impressum & Datenschutz
-├── package.json                 # Lokale Dev-Skripte
-├── assets/
-│   ├── app.js                   # Interaktive Logik (Sprachumschalter, Countdown, RSVP, Modal)
-│   ├── style.css                # Kompiliertes Tailwind & Design-Tokens der Originalseite
-│   ├── custom.css               # Ergänzende Styles, Modals, Timeline & Toast
-│   ├── party.ics                # Kalenderdatei (.ics)
-│   ├── hero-frankfurter-tor-... # Original-Foto Frankfurter Tor bei Sonnenuntergang
-│   ├── geschichte-...           # Original-Foto Karl-Marx-Allee & Henselmann-Türme
-│   ├── kuppelraum-...           # Original-Foto Kuppelraum
-│   ├── bar-...                  # Original-Foto Bar
-│   ├── raucherzimmer-...        # Original-Foto Loungeetage
-│   ├── kulinarisches-...        # Original-Foto Kulinarisches
-│   ├── turm-illustration-...    # Original-Illustration Turm
-│   └── plan-ebene...            # Grundrisse & Raumkonfigurationen
-└── public/                      # Synchronisierte Kopie aller Assets
+├── index.html                   # Master single-page website
+├── package.json                 # Dev runner script
+├── README.md                    # Project documentation
+├── .gitignore                   # Ignore .DS_Store, etc.
+└── assets/
+    ├── style.css                # Stylesheet & design tokens from Lounge im Turm
+    ├── hero-frankfurter-tor-... # Tower at sunset hero image
+    ├── geschichte-...           # Aerial view along Karl-Marx-Allee
+    ├── kuppelraum-...           # Dome Room photo
+    ├── bar-...                  # Bar floor photo
+    ├── raucherzimmer-...        # Lounge floor photo
+    ├── kulinarisches-...        # Dinner setting photo
+    ├── turm-illustration-...    # Architectural watermark illustration
+    └── plan-ebene...            # Level 15, 14, and 13 floor plans
 ```
