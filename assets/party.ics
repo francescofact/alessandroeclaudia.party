@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Alessandro and Claudia//Wedding Party//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ale-claudia-party-20260919@turm
+DTSTAMP:20260919T000000Z
+DTSTART:20260919T163000Z
+DTEND:20260920T030000Z
+SUMMARY:Alessandro & Claudia — Post-Wedding Party 🥂💍
+DESCRIPTION:Post-Wedding Party mit Freunden in der Lounge im Turm! Ebene 13–15 hoch über Berlin. Aperitivo ab 18:30 Uhr, Flying Dinner & Party bis spät in die Nacht.
+LOCATION:Lounge im Turm, Frankfurter Tor 9, 10243 Berlin
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

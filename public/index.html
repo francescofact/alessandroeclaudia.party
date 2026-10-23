@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alessandro & Claudia — Post-Wedding Party · Lounge im Turm Berlin</title>
+  <meta name="description" content="Alessandro & Claudia feiern ihre Hochzeitsparty mit Freunden in der Lounge im Turm am Frankfurter Tor 9 in Berlin. Alle Infos zu Ablauf, Location und RSVP.">
+  <meta name="author" content="Alessandro & Claudia" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alessandro & Claudia — Post-Wedding Party über den Dächern Berlins">
+  <meta property="og:description" content="Feiert mit uns das Leben und die Liebe im höchsten Salon des Frankfurter Tors in Berlin!">
+  <meta property="og:image" content="assets/hero-frankfurter-tor-DvXe2A3Z.jpg">
+
+  <!-- Google Fonts: Cormorant Garamond & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/custom.css">
+</head>
+
+<body class="bg-background text-foreground font-body antialiased selection:bg-gold/30 selection:text-gold-light">
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <nav id="main-navbar" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 sm:h-20">
+      
+      <!-- Brand Logo / Names -->
+      <a href="#hero" class="group flex flex-col">
+        <span class="font-display text-xl sm:text-2xl tracking-wide text-gold group-hover:text-gold-light transition-colors" data-i18n="nav_brand">
+          Alessandro & Claudia
+        </span>
+        <span class="text-[10px] tracking-[0.25em] uppercase text-muted-foreground -mt-1 font-body">
+          Lounge im Turm · Berlin
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#geschichte" class="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-gold transition-colors font-medium" data-i18n="nav_story">Die Location</a>
+        <a href="#programm" class="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-gold transition-colors font-medium" data-i18n="nav_schedule">Ablauf</a>
+        
+        <!-- Dropdown / Sublinks for Spaces -->
+        <div class="relative group py-2">
+          <a href="#kuppelraum" class="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-gold transition-colors font-medium inline-flex items-center gap-1" data-i18n="nav_spaces">
+            Die Ebenen
+            <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <div class="absolute left-0 top-full pt-2 w-48 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200">
+            <div class="bg-card/95 backdrop-blur-md border border-border p-2 rounded shadow-2xl flex flex-col gap-1">
+              <a href="#kuppelraum" class="px-3 py-2 text-xs tracking-wider uppercase text-cream hover:text-gold hover:bg-secondary/40 rounded transition-colors" data-i18n="nav_kuppel">Kuppelraum (15)</a>
+              <a href="#bar" class="px-3 py-2 text-xs tracking-wider uppercase text-cream hover:text-gold hover:bg-secondary/40 rounded transition-colors" data-i18n="nav_bar">Die Bar (14)</a>
+              <a href="#raucherzimmer" class="px-3 py-2 text-xs tracking-wider uppercase text-cream hover:text-gold hover:bg-secondary/40 rounded transition-colors" data-i18n="nav_lounge">Die Lounge (13)</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#kulinarisches" class="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-gold transition-colors font-medium" data-i18n="nav_culinary">Kulinarisches</a>
+        <a href="#faq" class="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-gold transition-colors font-medium" data-i18n="nav_faq">FAQ & Anfahrt</a>
+      </div>
+
+      <!-- Right Action & Language Switcher -->
+      <div class="flex items-center gap-4">
+        
+        <!-- Language Switcher Pills -->
+        <div class="flex items-center bg-secondary/60 p-0.5 rounded-full border border-border/80">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="it">IT</button>
+        </div>
+
+        <!-- Quick RSVP CTA -->
+        <a href="#rsvp" class="hidden sm:inline-block px-5 py-2 border border-gold text-gold text-xs tracking-[0.2em] uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-300 font-medium rounded-sm shadow-sm" data-i18n="btn_rsvp_quick">
+          Zusagen
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-foreground p-1 hover:text-gold transition-colors" aria-label="Menü">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu-dropdown" class="hidden lg:hidden bg-background/95 backdrop-blur-md border-b border-border">
+      <ul class="flex flex-col items-center gap-4 py-6 text-sm tracking-[0.2em] uppercase font-body">
+        <li><a href="#geschichte" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_story">Die Location</a></li>
+        <li><a href="#programm" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_schedule">Ablauf</a></li>
+        <li><a href="#kuppelraum" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_kuppel">Kuppelraum (Ebene 15)</a></li>
+        <li><a href="#bar" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_bar">Die Bar (Ebene 14)</a></li>
+        <li><a href="#raucherzimmer" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_lounge">Die Lounge (Ebene 13)</a></li>
+        <li><a href="#kulinarisches" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_culinary">Kulinarisches</a></li>
+        <li><a href="#rsvp" class="text-gold hover:text-gold-light transition-colors font-medium" data-i18n="nav_rsvp">Zusagen (RSVP)</a></li>
+        <li><a href="#faq" class="text-muted-foreground hover:text-gold transition-colors" data-i18n="nav_faq">FAQ & Anfahrt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
+    <!-- Hero Background Image with original asset -->
+    <img src="assets/hero-frankfurter-tor-DvXe2A3Z.jpg" alt="Frankfurter Tor Türme bei Sonnenuntergang" class="absolute inset-0 w-full h-full object-cover object-center" width="1920" height="1080">
+    <div class="absolute inset-0 bg-gradient-to-b from-background/75 via-background/50 to-background"></div>
+
+    <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto animate-fade-in mt-6">
+      
+      <!-- Location & Date Pill -->
+      <p class="inline-block text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6 font-body font-medium bg-background/40 backdrop-blur-sm px-4 py-1.5 rounded-full border border-gold/30" data-i18n="hero_location">
+        Frankfurter Tor 9 · 10243 Berlin
+      </p>
+
+      <!-- Main Headline: Couple Names -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-none text-warm-white mb-4 sm:mb-6 drop-shadow-lg">
+        <span class="block tracking-wide" data-i18n="hero_title_prefix">Alessandro & Claudia</span>
+        <span class="block text-gold italic text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 sm:mt-4 font-normal" data-i18n="hero_title_sub">
+          Post-Wedding Party
+        </span>
+      </h1>
+
+      <!-- Gold separator line -->
+      <div class="gold-line w-24 sm:w-36 mx-auto mb-6 sm:mb-8"></div>
+
+      <!-- Description -->
+      <p class="text-base sm:text-lg md:text-xl text-cream font-body font-light max-w-2xl mx-auto leading-relaxed px-2 sm:px-0 mb-10" data-i18n="hero_desc">
+        Wir haben Ja gesagt! Jetzt wollen wir das Leben, die Liebe und unsere wunderbaren Freunde hoch über den Dächern Berlins im höchsten Salon des Frankfurter Tors feiern.
+      </p>
+
+      <!-- Key Event Facts Banner -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-10 text-left">
+        <div class="bg-card/70 border border-border/70 backdrop-blur-md p-3.5 rounded-md">
+          <p class="text-[11px] tracking-widest uppercase text-gold font-body" data-i18n="fact_date_label">Datum</p>
+          <p class="text-sm font-semibold text-warm-white font-body mt-0.5" data-i18n="fact_date_val">19. September 2026</p>
+        </div>
+        <div class="bg-card/70 border border-border/70 backdrop-blur-md p-3.5 rounded-md">
+          <p class="text-[11px] tracking-widest uppercase text-gold font-body" data-i18n="fact_time_label">Uhrzeit</p>
+          <p class="text-sm font-semibold text-warm-white font-body mt-0.5" data-i18n="fact_time_val">18:30 Uhr · Open End</p>
+        </div>
+        <div class="bg-card/70 border border-border/70 backdrop-blur-md p-3.5 rounded-md">
+          <p class="text-[11px] tracking-widest uppercase text-gold font-body" data-i18n="fact_venue_label">Location</p>
+          <p class="text-sm font-semibold text-warm-white font-body mt-0.5" data-i18n="fact_venue_val">Lounge im Turm</p>
+        </div>
+        <div class="bg-card/70 border border-border/70 backdrop-blur-md p-3.5 rounded-md">
+          <p class="text-[11px] tracking-widest uppercase text-gold font-body" data-i18n="fact_dress_label">Dresscode</p>
+          <p class="text-sm font-semibold text-warm-white font-body mt-0.5" data-i18n="fact_dress_val">Cocktail Chic</p>
+        </div>
+      </div>
+
+      <!-- Live Countdown Clock -->
+      <div class="max-w-md mx-auto mb-10">
+        <div class="flex justify-center gap-3 sm:gap-4">
+          <div class="countdown-box">
+            <span id="cd-days-val" class="font-display text-2xl sm:text-3xl text-gold block font-semibold leading-none">--</span>
+            <span class="text-[10px] sm:text-xs tracking-wider uppercase text-muted-foreground mt-1 block" data-i18n="cd_days">Tage</span>
+          </div>
+          <div class="countdown-box">
+            <span id="cd-hours-val" class="font-display text-2xl sm:text-3xl text-gold block font-semibold leading-none">--</span>
+            <span class="text-[10px] sm:text-xs tracking-wider uppercase text-muted-foreground mt-1 block" data-i18n="cd_hours">Stunden</span>
+          </div>
+          <div class="countdown-box">
+            <span id="cd-mins-val" class="font-display text-2xl sm:text-3xl text-gold block font-semibold leading-none">--</span>
+            <span class="text-[10px] sm:text-xs tracking-wider uppercase text-muted-foreground mt-1 block" data-i18n="cd_minutes">Minuten</span>
+          </div>
+          <div class="countdown-box">
+            <span id="cd-secs-val" class="font-display text-2xl sm:text-3xl text-gold block font-semibold leading-none">--</span>
+            <span class="text-[10px] sm:text-xs tracking-wider uppercase text-muted-foreground mt-1 block" data-i18n="cd_seconds">Sekunden</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#rsvp" class="px-8 py-3.5 bg-gold text-primary-foreground text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold hover:bg-gold-light transition-all duration-300 shadow-lg gold-glow-hover" data-i18n="hero_btn_rsvp">
+          Jetzt zusagen (RSVP)
+        </a>
+        <a href="assets/party.ics" id="btn-add-calendar" download="Alessandro-Claudia-Hochzeitsparty.ics" class="px-6 py-3.5 border border-gold/70 text-gold text-xs sm:text-sm tracking-[0.2em] uppercase hover:bg-gold/15 transition-all duration-300 font-medium inline-flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <span data-i18n="hero_btn_calendar">Zum Kalender hinzufügen</span>
+        </a>
+        <a href="#programm" class="px-6 py-3.5 border border-border text-cream text-xs sm:text-sm tracking-[0.2em] uppercase hover:text-gold hover:border-gold transition-all duration-300 font-medium" data-i18n="hero_btn_details">
+          Ablauf & Details
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== STORY & VENUE SECTION ==================== -->
+  <section id="geschichte" class="relative py-24 md:py-32 bg-card overflow-hidden">
+    <!-- Historic architectural background watermark illustration -->
+    <img src="assets/turm-illustration-DQYEXStI.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute -right-16 top-1/2 -translate-y-1/2 h-[120%] w-auto opacity-[0.06] mix-blend-luminosity">
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="story_badge">Feiern im Baudenkmal</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4" data-i18n="story_title">Liebe Freunde & Wegbegleiter</h2>
+        <div class="gold-line w-16 mx-auto mb-6"></div>
+      </div>
+
+      <!-- Grid Content -->
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Photo with hover zoom -->
+        <div class="overflow-hidden rounded border border-border shadow-2xl zoom-container">
+          <img src="assets/geschichte-D11eRcwK.jpg" alt="Karl-Marx-Allee und Frankfurter Tor aus der Vogelperspektive" loading="lazy" class="w-full h-[420px] object-cover">
+        </div>
+
+        <!-- Narrative texts -->
+        <div class="space-y-6">
+          <p class="text-secondary-foreground font-body font-light leading-relaxed text-base md:text-lg" data-i18n="story_p1">
+            Nach unserer standesamtlichen Trauung im intimen Kreis gibt es für uns nur noch eines: mit euch allen die Gläser zu erheben, zu lachen, zu tanzen und eine unvergessliche Nacht zu verbringen.
+          </p>
+          <p class="text-secondary-foreground font-body font-light leading-relaxed text-base md:text-lg" data-i18n="story_p2">
+            Dafür haben wir uns einen der geschichtsträchtigsten und spektakulärsten Orte Berlins ausgesucht: Die monumentalen Henselmann-Türme am Frankfurter Tor — das längste geschlossene Baudenkmal Europas. Der südliche Turm steht an diesem Abend exklusiv für unsere Party offen.
+          </p>
+          <p class="text-secondary-foreground font-body font-light leading-relaxed text-base md:text-lg" data-i18n="story_p3">
+            Über drei Etagen — von der intimen Lounge auf Ebene 13 über die edle Bar auf Ebene 14 bis zum Kuppelraum mit 360°-Außenring auf Ebene 15 — feiern wir zusammen über den glitzernden Lichtern der Stadt.
+          </p>
+
+          <div class="pt-4 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-body font-medium">3 Exklusive Etagen</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-body font-medium">360° Panorama</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-body font-medium">Open Bar & DJ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SCHEDULE / PROGRAMM SECTION ==================== -->
+  <section id="programm" class="py-24 md:py-32 gradient-royal">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="sched_badge">Wie der Abend wird</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4" data-i18n="sched_title">Ablauf des Abends</h2>
+        <div class="gold-line w-16 mx-auto mb-6"></div>
+        <p class="text-muted-foreground font-body font-light max-w-xl mx-auto leading-relaxed" data-i18n="sched_desc">
+          Ein Abend zum Genießen, Anstoßen und Feiern ohne starre Sitzordnung — fließend, lebendig und mit bester Aussicht.
+        </p>
+      </div>
+
+      <!-- Timeline List -->
+      <div class="space-y-12 max-w-3xl mx-auto">
+        
+        <!-- Step 1: 18:30 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="inline-block px-3 py-1 bg-gold/15 text-gold border border-gold/40 text-xs tracking-wider uppercase font-semibold rounded mb-2 font-body" data-i18n="sched_1_time">18:30 Uhr</span>
+          <h3 class="font-display text-2xl md:text-3xl text-warm-white mb-2" data-i18n="sched_1_title">Aperitivo & Sunset auf Ebene 14</h3>
+          <p class="text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="sched_1_desc">
+            Ankunft hoch über Berlin. Wir empfangen euch auf der Barebene und dem umlaufenden Balkon mit Prosecco, Signature Drinks und feinem Fingerfood zur Golden Hour.
+          </p>
+        </div>
+
+        <!-- Step 2: 19:45 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="inline-block px-3 py-1 bg-gold/15 text-gold border border-gold/40 text-xs tracking-wider uppercase font-semibold rounded mb-2 font-body" data-i18n="sched_2_time">19:45 Uhr</span>
+          <h3 class="font-display text-2xl md:text-3xl text-warm-white mb-2" data-i18n="sched_2_title">Flying Dinner im Kuppelraum</h3>
+          <p class="text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="sched_2_desc">
+            Italienisch inspirierte Gaumenfreuden, sommerliche Kreationen und frische Köstlichkeiten — locker als Flying Buffet serviert, damit ihr euch frei unterhalten könnt.
+          </p>
+        </div>
+
+        <!-- Step 3: 21:00 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="inline-block px-3 py-1 bg-gold/15 text-gold border border-gold/40 text-xs tracking-wider uppercase font-semibold rounded mb-2 font-body" data-i18n="sched_3_time">21:00 Uhr</span>
+          <h3 class="font-display text-2xl md:text-3xl text-warm-white mb-2" data-i18n="sched_3_title">Hochzeits-Toast & Tortenanschnitt</h3>
+          <p class="text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="sched_3_desc">
+            Ein gemeinsamer Moment für Toasts, Liebe und das Anschneiden unserer Hochzeitstorte, begleitet von italienischem Espresso und süßen Desserts.
+          </p>
+        </div>
+
+        <!-- Step 4: 21:30 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="inline-block px-3 py-1 bg-gold/15 text-gold border border-gold/40 text-xs tracking-wider uppercase font-semibold rounded mb-2 font-body" data-i18n="sched_4_time">21:30 Uhr</span>
+          <h3 class="font-display text-2xl md:text-3xl text-warm-white mb-2" data-i18n="sched_4_title">Party & Open Bar unter der Kuppel</h3>
+          <p class="text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="sched_4_desc">
+            Der Dancefloor unter der Kuppel erwacht! Unser DJ legt auf, die Bar ist eröffnet und wir tanzen bis in die frühen Morgenstunden über den Dächern Berlins.
+          </p>
+        </div>
+
+        <!-- Step 5: 01:00 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="inline-block px-3 py-1 bg-gold/15 text-gold border border-gold/40 text-xs tracking-wider uppercase font-semibold rounded mb-2 font-body" data-i18n="sched_5_time">01:00 Uhr</span>
+          <h3 class="font-display text-2xl md:text-3xl text-warm-white mb-2" data-i18n="sched_5_title">Midnight Bites & Chillout</h3>
+          <p class="text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="sched_5_desc">
+            Mitternachtssnack für Nachtschwärmer, gemütliche Gespräche in den Ledersesseln der Loungeetage und Weiterfeiern bis zum Morgengrauen.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SPACES: EBENE 15 (KUPPELRAUM) ==================== -->
+  <section id="kuppelraum" class="py-24 md:py-32 bg-card">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      
+      <!-- Visual with hover zoom -->
+      <div class="overflow-hidden rounded border border-border shadow-xl zoom-container">
+        <img src="assets/kuppelraum-DVxYrUW8.jpg" alt="Der Kuppelraum mit Panoramablick über Berlin" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover">
+      </div>
+
+      <!-- Description & Features -->
+      <div>
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="kuppel_sub">Ebene 15 · Der höchste Salon</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6" data-i18n="kuppel_title">Der Kuppelraum</h2>
+        <div class="gold-line w-16 mb-6"></div>
+        
+        <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6" data-i18n="kuppel_desc">
+          Vom Inneren des Kuppelraumes und dem 360°-Außenring genießen wir die unvergleichliche Rundumaussicht über ganz Berlin — vom Fernsehturm bis zum Teufelsberg. Der Raum dient uns zuerst als stilvoller Speisesalon und verwandelt sich später in unseren Tanzpalast unter der Kuppel.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="kuppel_b1">360° Rundumblick über die Skyline Berlins</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="kuppel_b2">Begehbarer Außenring für frische Luft & Sonnenuntergang</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="kuppel_b3">Stilvolles Flying Dinner & spätere Tanzfläche</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="kuppel_b4">Beeindruckende historische Kuppelarchitektur</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <button data-open-modal="kuppelraum" class="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body font-medium">
+            <span data-i18n="btn_floorplans">Grundrisse & Details ansehen</span>
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+          <a href="kuppelraum.html" class="text-xs tracking-wider uppercase text-muted-foreground hover:text-cream transition-colors underline underline-offset-4">
+            Detailseite öffnen →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SPACES: EBENE 14 (DIE BAR) ==================== -->
+  <section id="bar" class="py-24 md:py-32 gradient-royal">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      
+      <!-- Visual with hover zoom (reversed on desktop) -->
+      <div class="md:order-2 overflow-hidden rounded border border-border shadow-xl zoom-container">
+        <img src="assets/bar-DrBA-e4p.jpg" alt="Die exklusive Bar im Turm" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover">
+      </div>
+
+      <!-- Description & Features -->
+      <div class="md:order-1">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="bar_sub">Ebene 14 · Signature Drinks & DJ</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6" data-i18n="bar_title">Die Bar & Cocktail Lounge</h2>
+        <div class="gold-line w-16 mb-6"></div>
+        
+        <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6" data-i18n="bar_desc">
+          Auf dieser Ebene ist eine komplett ausgestattete, moderne Bar eingerichtet — der perfekte Rahmen für erstklassige Drinks und lockere Begegnungen. Hier mixen unsere Barkeeper eure Drinks und unser DJ sorgt für den perfekten Soundtrack.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="bar_b1">Full Open Bar mit Signature Cocktails (u.a. Claudias Spritz & Alessandros Negroni)</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="bar_b2">Ausgewählte italienische Weine, Champagner & Berliner Craft Beer</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="bar_b3">DJ Pult und exzellente Soundanlage</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="bar_b4">Direkter Zugang zur Wendeltreppe in den Kuppelraum</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <button data-open-modal="bar" class="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body font-medium">
+            <span data-i18n="btn_floorplans">Grundriss Bar ansehen</span>
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+          <a href="bar.html" class="text-xs tracking-wider uppercase text-muted-foreground hover:text-cream transition-colors underline underline-offset-4">
+            Detailseite öffnen →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SPACES: EBENE 13 (DIE LOUNGE) ==================== -->
+  <section id="raucherzimmer" class="py-24 md:py-32 bg-card">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      
+      <!-- Visual with hover zoom -->
+      <div class="overflow-hidden rounded border border-border shadow-xl zoom-container">
+        <img src="assets/raucherzimmer-9tY4Frmt.jpg" alt="Die stilvolle Loungeetage mit Ledersesseln" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover">
+      </div>
+
+      <!-- Description & Features -->
+      <div>
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="lounge_sub">Ebene 13 · Intimer Rückzugsort</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6" data-i18n="lounge_title">Die Loungeetage</h2>
+        <div class="gold-line w-16 mb-6"></div>
+        
+        <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6" data-i18n="lounge_desc">
+          Auf dem Weg in den Turm betretet ihr als erste Ebene die Loungeetage — ein intimer Rückzugsort mit elegantem Ambiente, warmem Licht und stilvollen Chesterfield-Sitzgruppen für entspannte Gespräche abseits des Trubels.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="lounge_b1">Bequeme Ledersessel & gemütliche Atmosphäre</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="lounge_b2">Polaroid-Fotoecke & unser Hochzeits-Gästebuch</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="lounge_b3">Garderobe & Welcome-Area</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="lounge_b4">Idealer Rückzugsort für persönliche Gespräche</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <button data-open-modal="lounge" class="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body font-medium">
+            <span data-i18n="btn_floorplans">Grundriss Loungeetage ansehen</span>
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+          <a href="raucherzimmer.html" class="text-xs tracking-wider uppercase text-muted-foreground hover:text-cream transition-colors underline underline-offset-4">
+            Detailseite öffnen →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== CULINARY & DRINKS SECTION ==================== -->
+  <section id="kulinarisches" class="py-24 md:py-32 gradient-royal">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      
+      <!-- Visual with hover zoom (reversed on desktop) -->
+      <div class="md:order-2 overflow-hidden rounded border border-border shadow-xl zoom-container">
+        <img src="assets/kulinarisches-DaIhgckE.jpg" alt="Elegantes Dinner-Setting mit Blick auf Berlin" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover">
+      </div>
+
+      <!-- Content -->
+      <div class="md:order-1">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="culinary_sub">Himmlisch genießen</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6" data-i18n="culinary_title">Kulinarisches & Bar</h2>
+        <div class="gold-line w-16 mb-6"></div>
+        
+        <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6" data-i18n="culinary_desc">
+          Liebe geht durch den Magen — und Freundschaft erst recht. Für unseren Abend haben wir ein exquisites Flying Catering kreiert, das italienische Wurzeln mit moderner Berliner Frische vereint.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="culinary_b1">Aperitivo & Flying Antipasti: Feinste Burrata, Trüffelcrostini, Arancini & Carpaccio</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="culinary_b2">Hauptgänge im Flying Style: Hausgemachte Pasta, mediterraner Fisch & Fleisch, reichhaltige vegetarische & vegane Optionen</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="culinary_b3">Dolci & Torte: Handgemachte Pâtisserie, Tiramisù-Spezialität & fruchtige Desserts</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-muted-foreground font-body">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+            <span data-i18n="culinary_b4">Late-Night Snack: Berliner Kult-Klassiker & herzhafte Mitternachtsstärkung</span>
+          </li>
+        </ul>
+
+        <div class="p-4 bg-card/60 border border-border/80 rounded flex items-center gap-4">
+          <div class="text-gold flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <p class="text-xs text-muted-foreground font-body leading-relaxed">
+            Vegetarisch, vegan und glutenfreie Alternativen sind reichlich vorhanden. Bitte teilt uns eventuelle Allergien unten im RSVP-Formular mit!
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== RSVP FORM SECTION ==================== -->
+  <section id="rsvp" class="py-24 md:py-32 bg-card">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="rsvp_badge">Eure Rückmeldung</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4" data-i18n="rsvp_title">Feiert ihr mit uns?</h2>
+        <div class="gold-line w-16 mx-auto mb-6"></div>
+        <p class="text-muted-foreground font-body font-light max-w-lg mx-auto mb-8 leading-relaxed" data-i18n="rsvp_desc">
+          Damit wir Essen, Drinks und Plätze bestmöglich vorbereiten können, gebt uns bitte bis zum 15. August 2026 Bescheid, ob ihr dabei seid.
+        </p>
+      </div>
+
+      <!-- Form Box -->
+      <form id="rsvp-form" class="bg-background/60 border border-border/80 p-8 sm:p-10 rounded-lg shadow-2xl backdrop-blur-md space-y-6">
+        
+        <!-- Row: Name & Email -->
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label for="rsvp-name" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_name">Dein vollständiger Name *</label>
+            <input type="text" id="rsvp-name" required placeholder="z.B. Marco Rossi" class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+          </div>
+          <div>
+            <label for="rsvp-email" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_email">Deine E-Mail-Adresse *</label>
+            <input type="email" id="rsvp-email" required placeholder="deine.email@beispiel.de" class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+          </div>
+        </div>
+
+        <!-- Attendance Select -->
+        <div>
+          <label for="rsvp-status" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_status">Bist du dabei? *</label>
+          <select id="rsvp-status" class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+            <option value="yes_one" data-i18n="rsvp_opt_yes">Ja, ich bin dabei! 🎉</option>
+            <option value="yes_two" data-i18n="rsvp_opt_yes_two">Ja, wir kommen zu zweit! 🥂</option>
+            <option value="no" data-i18n="rsvp_opt_no">Leider nein, aber im Herzen bei euch ❤️</option>
+          </select>
+        </div>
+
+        <!-- Plus-One Name (Conditional) -->
+        <div id="plus-one-container" class="hidden">
+          <label for="rsvp-plusone" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_plusone">Name der Begleitperson</label>
+          <input type="text" id="rsvp-plusone" placeholder="Vor- und Nachname" class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+        </div>
+
+        <!-- Dietary Preferences -->
+        <div id="diet-container" class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label for="rsvp-diet" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_diet">Ernährung / Menü-Wunsch</label>
+            <select id="rsvp-diet" class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+              <option value="omni" data-i18n="rsvp_diet_omni">Allesesser (Fleisch / Fisch)</option>
+              <option value="veg" data-i18n="rsvp_diet_veg">Vegetarisch</option>
+              <option value="vegan" data-i18n="rsvp_diet_vegan">Vegan</option>
+            </select>
+          </div>
+          <div>
+            <label for="rsvp-allergies" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_allergies">Allergien oder Unverträglichkeiten</label>
+            <input type="text" id="rsvp-allergies" placeholder="z.B. Laktose, Nüsse, Gluten..." class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+          </div>
+        </div>
+
+        <!-- Song Request -->
+        <div id="song-container">
+          <label for="rsvp-song" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_song">Dein Songwunsch für den DJ 🎶</label>
+          <input type="text" id="rsvp-song" placeholder="Welcher Track bringt dich garantiert zum Tanzen?" class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body">
+        </div>
+
+        <!-- Personal Message -->
+        <div>
+          <label for="rsvp-msg" class="block text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2" data-i18n="rsvp_lbl_msg">Persönliche Nachricht an Alessandro & Claudia</label>
+          <textarea id="rsvp-msg" rows="3" placeholder="Ein lieber Gruß, Anekdote oder Frage..." class="w-full bg-secondary/40 border border-border px-4 py-3 text-sm text-foreground rounded focus:outline-none focus:border-gold transition-colors font-body"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center gap-4">
+          <button type="submit" class="w-full sm:w-auto px-10 py-4 bg-gold text-primary-foreground text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold hover:bg-gold-light transition-all duration-300 rounded-sm shadow-md" data-i18n="rsvp_btn_submit">
+            Zusage abschicken
+          </button>
+          <a href="#" id="rsvp-email-btn" class="w-full sm:w-auto text-center px-6 py-4 border border-border text-muted-foreground text-xs tracking-widest uppercase hover:text-gold hover:border-gold transition-colors" data-i18n="rsvp_btn_email">
+            Alternativ per E-Mail antworten
+          </a>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section id="faq" class="py-24 md:py-32 gradient-royal">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="faq_badge">Wissenswertes</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4" data-i18n="faq_title">Häufige Fragen & Infos</h2>
+        <div class="gold-line w-16 mx-auto mb-6"></div>
+      </div>
+
+      <!-- FAQ Accordion Items -->
+      <div class="space-y-4">
+        
+        <!-- Q1 -->
+        <div class="faq-item bg-card/70 border border-border/70 rounded-md p-5 backdrop-blur-sm">
+          <details class="group">
+            <summary class="flex items-center justify-between font-display text-xl sm:text-2xl text-warm-white">
+              <span data-i18n="faq_q1">Gibt es einen Dresscode?</span>
+              <svg class="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <p class="mt-4 text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="faq_a1">
+              Festlich & Elegant / Cocktail Chic. Bringt gerne etwas mit, worin ihr euch wohlfühlt und tanzen könnt — für später empfehlen wir flache Wechselschuhe!
+            </p>
+          </details>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item bg-card/70 border border-border/70 rounded-md p-5 backdrop-blur-sm">
+          <details class="group">
+            <summary class="flex items-center justify-between font-display text-xl sm:text-2xl text-warm-white">
+              <span data-i18n="faq_q2">Wie steht es mit Geschenken?</span>
+              <svg class="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <p class="mt-4 text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="faq_a2">
+              Das allerschönste Geschenk ist eure Anwesenheit und eine unvergessliche Party mit euch! Wer uns dennoch eine Freude machen möchte: Wir freuen uns riesig über einen Beitrag zu unseren Flitterwochen.
+            </p>
+          </details>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item bg-card/70 border border-border/70 rounded-md p-5 backdrop-blur-sm">
+          <details class="group">
+            <summary class="flex items-center justify-between font-display text-xl sm:text-2xl text-warm-white">
+              <span data-i18n="faq_q3">Dürfen Kinder mitkommen?</span>
+              <svg class="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <p class="mt-4 text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="faq_a3">
+              Wir lieben eure Kids sehr! Allerdings möchten wir diesen Abend hoch oben im Turm als ausgelassene Party unter Freunden feiern und empfehlen euch daher, die Nacht als entspannte Eltern-Auszeit zu genießen.
+            </p>
+          </details>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item bg-card/70 border border-border/70 rounded-md p-5 backdrop-blur-sm">
+          <details class="group">
+            <summary class="flex items-center justify-between font-display text-xl sm:text-2xl text-warm-white">
+              <span data-i18n="faq_q4">Was passiert bei schlechtem Wetter?</span>
+              <svg class="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <p class="mt-4 text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="faq_a4">
+              Der Turm ist auf allen Ebenen wetterfest, vollklimatisiert und bietet bei jedem Wetter ein atemberaubendes Panorama. Der Außenring auf Ebene 15 ist auch überdacht zugänglich.
+            </p>
+          </details>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item bg-card/70 border border-border/70 rounded-md p-5 backdrop-blur-sm">
+          <details class="group">
+            <summary class="flex items-center justify-between font-display text-xl sm:text-2xl text-warm-white">
+              <span data-i18n="faq_q5">Gibt es Übernachtungsmöglichkeiten in der Nähe?</span>
+              <svg class="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <p class="mt-4 text-muted-foreground font-body font-light leading-relaxed text-sm sm:text-base" data-i18n="faq_a5">
+              Ja! Direkt in Friedrichshain gibt es wunderbare Hotels in Gehweite, z.B. das Michelberger Hotel (Warschauer Str.), das nhow Berlin an der Spree oder das Hotel Indigo an der East Side Gallery.
+            </p>
+          </details>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== LOCATION & CONTACT SECTION ==================== -->
+  <section id="kontakt" class="py-24 md:py-32 bg-card">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium" data-i18n="loc_badge">Veranstaltungsort</p>
+        <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4" data-i18n="loc_title">Anfahrt & Lage</h2>
+        <div class="gold-line w-16 mx-auto mb-6"></div>
+      </div>
+
+      <!-- Info Columns -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+        
+        <!-- Address -->
+        <div class="p-6 bg-secondary/30 rounded border border-border">
+          <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center mb-4 mx-auto md:mx-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <h3 class="font-display text-xl text-warm-white mb-2" data-i18n="loc_addr_title">Lounge im Turm</h3>
+          <p class="text-sm text-muted-foreground font-body leading-relaxed" data-i18n="loc_addr_sub">
+            Frankfurter Tor 9 · 10243 Berlin (Südturm)
+          </p>
+        </div>
+
+        <!-- Public Transit -->
+        <div class="p-6 bg-secondary/30 rounded border border-border">
+          <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center mb-4 mx-auto md:mx-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="font-display text-xl text-warm-white mb-2" data-i18n="loc_pt_title">Öffentliche Verkehrsmittel</h3>
+          <p class="text-sm text-muted-foreground font-body leading-relaxed" data-i18n="loc_pt_desc">
+            U-Bahn U5 (Station 'Frankfurter Tor' — direkter Ausgang am Südturm). Tram M10. S-Bahn Warschauer Straße ca. 10 Min. zu Fuß.
+          </p>
+        </div>
+
+        <!-- Car & Parking -->
+        <div class="p-6 bg-secondary/30 rounded border border-border">
+          <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center mb-4 mx-auto md:mx-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+          </div>
+          <h3 class="font-display text-xl text-warm-white mb-2" data-i18n="loc_car_title">Anfahrt mit dem Auto & Parken</h3>
+          <p class="text-sm text-muted-foreground font-body leading-relaxed" data-i18n="loc_car_desc">
+            Tiefgarage im Kino Kosmos (Karl-Marx-Allee 131a, 10243 Berlin — ca. 250m zu Fuß).
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Google Maps Embed matching original -->
+      <div class="overflow-hidden border border-border shadow-2xl rounded-md">
+        <iframe title="Lageplan Lounge im Turm — Frankfurter Tor 9, Berlin" src="https://www.google.com/maps?q=Frankfurter+Tor+9,+10243+Berlin&output=embed" width="100%" height="420" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center justify-between text-sm font-body">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Frankfurter+Tor+9,+10243+Berlin" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors tracking-wide inline-flex items-center gap-1 font-medium" data-i18n="loc_btn_maps">
+          Route in Google Maps öffnen →
+        </a>
+        <span class="text-xs text-muted-foreground">Südturm Frankfurter Tor · Eingang Ebene Karl-Marx-Allee</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== INTERACTIVE FLOOR PLAN MODAL ==================== -->
+  <div id="floorplan-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content p-6 sm:p-8">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-border pb-4 mb-6">
+        <div>
+          <h3 id="modal-title" class="font-display text-2xl sm:text-3xl text-warm-white">Grundrisse & Details</h3>
+          <p id="modal-desc" class="text-xs sm:text-sm text-muted-foreground font-body mt-1">Erkunde die Ebenen des Südturms</p>
+        </div>
+        <button id="modal-close-btn" class="text-muted-foreground hover:text-gold p-2 transition-colors" aria-label="Schließen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Modal Tabs for Levels -->
+      <div class="flex flex-wrap gap-2 mb-6 border-b border-border/70 pb-3">
+        <button class="modal-tab-btn px-4 py-2 text-xs tracking-wider uppercase font-medium rounded transition-all border border-transparent" data-floor="kuppelraum">
+          Ebene 15 (Kuppelraum)
+        </button>
+        <button class="modal-tab-btn px-4 py-2 text-xs tracking-wider uppercase font-medium rounded transition-all border border-transparent" data-floor="bar">
+          Ebene 14 (Bar)
+        </button>
+        <button class="modal-tab-btn px-4 py-2 text-xs tracking-wider uppercase font-medium rounded transition-all border border-transparent" data-floor="lounge">
+          Ebene 13 (Loungeetage)
+        </button>
+      </div>
+
+      <!-- Modal Gallery Container -->
+      <div id="modal-gallery" class="grid sm:grid-cols-2 gap-6">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Modal Footer CTA -->
+      <div class="mt-8 pt-4 border-t border-border flex justify-between items-center text-xs text-muted-foreground">
+        <span>Lounge im Turm · Frankfurter Tor 9</span>
+        <a href="#rsvp" onclick="closeFloorModal()" class="text-gold hover:text-gold-light uppercase tracking-wider font-semibold">
+          Zurück zur Zusage ↑
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-16 border-t border-border bg-background text-center">
+    <div class="max-w-4xl mx-auto px-6 space-y-6">
+      
+      <!-- Brand & Subtitle -->
+      <h3 class="font-display text-2xl text-gold" data-i18n="footer_copy">Alessandro & Claudia · Hochzeitsparty 2026</h3>
+      <p class="text-xs text-muted-foreground font-body tracking-wider uppercase" data-i18n="footer_loc">
+        Lounge im Turm · Frankfurter Tor 9 · 10243 Berlin
+      </p>
+
+      <!-- Quick nav in footer -->
+      <nav class="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-widest text-muted-foreground font-body">
+        <a href="#hero" class="hover:text-gold transition-colors">Start</a>
+        <a href="#geschichte" class="hover:text-gold transition-colors">Location</a>
+        <a href="#programm" class="hover:text-gold transition-colors">Ablauf</a>
+        <a href="#kuppelraum" class="hover:text-gold transition-colors">Kuppelraum</a>
+        <a href="#bar" class="hover:text-gold transition-colors">Bar</a>
+        <a href="#raucherzimmer" class="hover:text-gold transition-colors">Lounge</a>
+        <a href="#rsvp" class="text-gold hover:text-gold-light transition-colors font-medium">RSVP</a>
+        <a href="impressum.html" class="hover:text-gold transition-colors" data-i18n="footer_imprint">Impressum</a>
+      </nav>
+
+      <!-- Copyright -->
+      <div class="pt-6 border-t border-border/50 text-[11px] text-muted-foreground/70 font-body">
+        <p>© 2026 Alessandro & Claudia · Mit Vorfreude für unsere Freunde und Familie gestaltet.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/app.js"></script>
+</body>
+</html>

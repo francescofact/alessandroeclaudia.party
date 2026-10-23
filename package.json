@@ -1,0 +1,20 @@
+{
+  "name": "alessandro-claudia-wedding-party",
+  "version": "1.0.0",
+  "description": "Alessandro & Claudia — Post-Wedding Party in the Lounge im Turm, Berlin",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000",
+    "preview": "python3 -m http.server 3000",
+    "build": "echo 'Site is static and ready to host on GitHub Pages, Netlify, Vercel or any web server!'"
+  },
+  "keywords": [
+    "wedding-party",
+    "lounge-im-turm",
+    "berlin",
+    "frankfurter-tor",
+    "alessandro-claudia"
+  ],
+  "author": "Alessandro & Claudia",
+  "license": "MIT"
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro & Claudia — Post-Wedding Celebration · Lounge im Turm Berlin</title>
+  <meta name="description" content="Alessandro & Claudia are celebrating their post-wedding party with friends in the Lounge im Turm at Frankfurter Tor 9, Berlin.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alessandro & Claudia — Post-Wedding Party">
+  <meta property="og:description" content="Join us for a celebration above the rooftops of Berlin on Saturday, September 19, 2026.">
+  <meta property="og:image" content="assets/hero-frankfurter-tor-DvXe2A3Z.jpg">
+  
+  <link rel="stylesheet" crossorigin="" href="assets/style.css">
+  <style>
+    /* Smooth scrolling & clean modal styling */
+    html { scroll-behavior: smooth; }
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(10, 20, 40, 0.88);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-backdrop.active { display: flex; }
+    .modal-box {
+      background: hsl(220 45% 12%);
+      border: 1px solid hsl(38 65% 55% / 0.4);
+      max-width: 50rem;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen gradient-royal">
+      
+      <!-- NAVIGATION -->
+      <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+          <a href="#hero" class="font-display text-xl tracking-wide text-gold">Alessandro &amp; Claudia</a>
+          
+          <div class="hidden md:flex items-center gap-7 text-xs tracking-[0.2em] uppercase font-body text-muted-foreground">
+            <a href="#kuppelraum" class="hover:text-gold transition-colors">The Dome</a>
+            <a href="#bar" class="hover:text-gold transition-colors">The Bar</a>
+            <a href="#raucherzimmer" class="hover:text-gold transition-colors">The Lounge</a>
+            <a href="#geschichte" class="hover:text-gold transition-colors">Our Story</a>
+            <a href="#kulinarisches" class="hover:text-gold transition-colors">Culinary</a>
+            <a href="#anfrage" class="text-gold hover:text-gold-light transition-colors font-medium">RSVP</a>
+            <a href="#kontakt" class="hover:text-gold transition-colors">Details</a>
+          </div>
+
+          <button id="mobile-toggle" class="md:hidden text-foreground" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-background/95 backdrop-blur-md border-b border-border">
+          <ul class="flex flex-col items-center gap-4 py-6 text-xs tracking-[0.2em] uppercase font-body">
+            <li><a href="#kuppelraum" class="text-muted-foreground hover:text-gold transition-colors mobile-link">The Dome Room</a></li>
+            <li><a href="#bar" class="text-muted-foreground hover:text-gold transition-colors mobile-link">The Bar</a></li>
+            <li><a href="#raucherzimmer" class="text-muted-foreground hover:text-gold transition-colors mobile-link">The Lounge</a></li>
+            <li><a href="#geschichte" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Our Story</a></li>
+            <li><a href="#kulinarisches" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Culinary</a></li>
+            <li><a href="#anfrage" class="text-gold hover:text-gold-light transition-colors mobile-link font-medium">RSVP</a></li>
+            <li><a href="#kontakt" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Details</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <img src="assets/hero-frankfurter-tor-DvXe2A3Z.jpg" alt="Frankfurter Tor at Sunset" class="absolute inset-0 w-full h-full object-cover" width="1920" height="1080">
+        <div class="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background"></div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl animate-fade-in">
+          <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6 font-body font-medium">
+            Frankfurter Tor 9 · 10243 Berlin · Saturday, September 19, 2026
+          </p>
+          <h1 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light leading-snug sm:leading-snug text-warm-white mb-4 sm:mb-6 drop-shadow-lg">
+            Alessandro &amp; Claudia
+            <span class="block text-warm-white italic text-xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 sm:mt-3 font-normal">
+              Post-Wedding Celebration
+            </span>
+          </h1>
+          <div class="gold-line w-24 sm:w-32 mx-auto mb-6 sm:mb-8"></div>
+          <p class="text-base sm:text-lg md:text-xl text-cream font-body font-light max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
+            We said Yes! Now we want to celebrate life, love, and our wonderful friends high above the rooftops of Berlin in the highest salon at Frankfurter Tor.
+          </p>
+          <a href="#anfrage" class="inline-block mt-10 px-8 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
+            RSVP &amp; Details
+          </a>
+        </div>
+      </section>
+
+      <!-- KUPPELRAUM (LEVEL 15) -->
+      <section id="kuppelraum" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div>
+            <div class="overflow-hidden">
+              <img src="assets/kuppelraum-DVxYrUW8.jpg" alt="The elegant Dome Room with panoramic views over Berlin" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+          <div>
+            <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Level 15</p>
+            <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6">The Dome Room</h2>
+            <div class="gold-line w-16 mb-6"></div>
+            <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6">
+              From inside the circular dome room and its 360° exterior balcony, take in sweeping panoramic views across Berlin. This spectacular space will host our sunset flying dinner and later transform into our dance floor under the historic cupola.
+            </p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>360° panoramic view over the Berlin skyline</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Wrap-around outdoor balcony for fresh air &amp; sunset</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Flying dinner &amp; evening dance floor</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Iconic 1950s monumental cupola architecture</li>
+            </ul>
+            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body cursor-pointer" data-floor="kuppelraum">
+              Floor Plans &amp; Details
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BAR (LEVEL 14) -->
+      <section id="bar" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center md:direction-rtl">
+          <div class="md:order-2">
+            <div class="overflow-hidden">
+              <img src="assets/bar-DrBA-e4p.jpg" alt="The exclusive Bar in the Tower" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+          <div class="md:order-1">
+            <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Level 14</p>
+            <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6">The Bar</h2>
+            <div class="gold-line w-16 mb-6"></div>
+            <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6">
+              A fully equipped designer cocktail bar high above the city — the perfect backdrop for signature drinks, conversations, and toasts. Our dedicated bartenders will keep the glasses full while our DJ sets the groove right next to the counter.
+            </p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Full open bar with custom signature cocktails</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Italian wines, champagne &amp; Berlin craft beer</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>DJ booth &amp; sound setup</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Direct spiral staircase access up to the Dome Room</li>
+            </ul>
+            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body cursor-pointer" data-floor="bar">
+              Floor Plans &amp; Details
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOUNGE (LEVEL 13) -->
+      <section id="raucherzimmer" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div>
+            <div class="overflow-hidden">
+              <img src="assets/raucherzimmer-9tY4Frmt.jpg" alt="The stylish Lounge floor with leather armchairs" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+          <div>
+            <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Level 13</p>
+            <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6">The Lounge Floor</h2>
+            <div class="gold-line w-16 mb-6"></div>
+            <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6">
+              As you arrive on the tower floors, Level 13 is your first destination: an intimate retreat with elegant ambiance, comfortable Chesterfield leather armchairs, our Polaroid photo corner, and wedding guestbook.
+            </p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Plush leather seating &amp; relaxed atmosphere</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Polaroid photo station &amp; wedding guestbook</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Welcome reception &amp; coat check area</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Quiet haven for conversations away from the dance floor</li>
+            </ul>
+            <button class="floor-btn inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body cursor-pointer" data-floor="lounge">
+              Floor Plans &amp; Details
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY & LANDMARK -->
+      <section id="geschichte" class="relative py-24 md:py-32 bg-card overflow-hidden">
+        <img src="assets/turm-illustration-DQYEXStI.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute -right-16 top-1/2 -translate-y-1/2 h-[120%] w-auto opacity-[0.06] mix-blend-luminosity">
+        <div class="relative max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">September 19, 2026</p>
+            <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">Our Celebration</h2>
+            <div class="gold-line w-16 mx-auto mb-6"></div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="overflow-hidden">
+              <img src="assets/geschichte-D11eRcwK.jpg" alt="Karl-Marx-Allee and Frankfurter Tor from above" loading="lazy" class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+            <div class="space-y-5">
+              <p class="text-secondary-foreground font-body font-light leading-relaxed">
+                After tying the knot in an intimate ceremony, there is only one thing left to do: raise our glasses, laugh, dance, and share a magical night together with all of you!
+              </p>
+              <p class="text-secondary-foreground font-body font-light leading-relaxed">
+                For this celebration, we chose one of Berlin's most iconic architectural landmarks: the monumental Henselmann towers at Frankfurter Tor, built in the 1950s at the entrance to Karl-Marx-Allee. The entire south tower is reserved exclusively for our party.
+              </p>
+              <p class="text-secondary-foreground font-body font-light leading-relaxed">
+                From sunset drinks on the open-air balcony to a continuous flying dinner and dancing late into the night under the dome — we cannot wait to toast with you above the sparkling lights of Berlin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CULINARY -->
+      <section id="kulinarisches" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center md:direction-rtl">
+          <div class="md:order-2">
+            <div class="overflow-hidden">
+              <img src="assets/kulinarisches-DaIhgckE.jpg" alt="Elegant Dinner Setting overlooking Berlin" loading="lazy" class="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+          <div class="md:order-1">
+            <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Exquisite Dining</p>
+            <h2 class="font-display text-4xl md:text-5xl text-foreground mb-6">Culinary &amp; Drinks</h2>
+            <div class="gold-line w-16 mb-6"></div>
+            <p class="text-secondary-foreground font-body font-light leading-relaxed mb-6">
+              Great food and wine are central to celebrating life. For our evening, we've curated a delicious flying dinner blending Italian roots with contemporary Berlin flavors, served continuously so everyone can mingle freely.
+            </p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Aperitivo &amp; flying antipasti at sunset</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Handcrafted pasta &amp; Mediterranean delicacies</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Rich vegetarian, vegan &amp; gluten-free selections</li>
+              <li class="flex items-center gap-3 text-sm text-muted-foreground font-body"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Wedding cake, artisan dolci &amp; midnight bites</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section id="anfrage" class="py-24 md:py-32 bg-card">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Your Attendance</p>
+          <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">RSVP</h2>
+          <div class="gold-line w-16 mx-auto mb-6"></div>
+          <p class="text-muted-foreground font-body font-light max-w-lg mx-auto mb-10 leading-relaxed">
+            We can't wait to celebrate with you! Please let us know if you will be joining us by August 15, 2026. Send us an email with your attendance, plus-one, and any dietary preferences.
+          </p>
+          
+          <a href="mailto:alessandro.claudia.wedding@gmail.com?subject=RSVP%20-%20Alessandro%20%26%20Claudia%20Wedding%20Party&amp;body=Hi%20Alessandro%20%26%20Claudia%2C%0A%0AI%20am%20excited%20to%20celebrate%20with%20you!%0A%0AName(s)%3A%20%0AAttending%20(Yes%2FNo)%3A%20Yes%0ANumber%20of%20Guests%3A%20%0ADietary%20Preferences%2FAllergies%3A%20%0AFavorite%20Song%20for%20the%20DJ%3A%20%0APersonal%20Note%3A%20%0A%0ACheers!%0A" class="inline-flex items-center gap-3 px-10 py-4 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-4 w-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Send RSVP via Email
+          </a>
+
+          <p class="mt-6 text-sm font-body text-muted-foreground">
+            or reach out directly at <a href="mailto:alessandro.claudia.wedding@gmail.com" class="text-gold hover:text-gold-light transition-colors">alessandro.claudia.wedding@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- DETAILS & LOCATION -->
+      <section id="kontakt" class="py-24 md:py-32">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">We Look Forward To Celebrating With You</p>
+          <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">Event Details &amp; Location</h2>
+          <div class="gold-line w-16 mx-auto mb-12"></div>
+          
+          <div class="grid md:grid-cols-3 gap-10">
+            <div class="flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-6 w-6 text-gold mb-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
+                <p class="font-semibold text-foreground mb-2">Alessandro &amp; Claudia</p>
+                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Venue</span><br>Lounge im Turm (South Tower)<br>Frankfurter Tor 9<br>10243 Berlin</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-6 w-6 text-gold mb-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+              <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
+                <p class="font-semibold text-foreground mb-2">Date &amp; Schedule</p>
+                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Saturday, Sept 19, 2026</span><br>From 6:30 PM until Late<br>Dress Code: Cocktail Chic</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-6 w-6 text-gold mb-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
+                <p class="font-semibold text-foreground mb-2">Contact</p>
+                <a href="mailto:alessandro.claudia.wedding@gmail.com" class="font-body text-sm text-gold hover:text-gold-light transition-colors">alessandro.claudia.wedding@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16">
+            <div class="overflow-hidden border border-border shadow-lg">
+              <iframe title="Lageplan Lounge im Turm — Frankfurter Tor 9, Berlin" src="https://www.google.com/maps?q=Frankfurter+Tor+9,+10243+Berlin&amp;output=embed" width="100%" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" style="border: 0px;"></iframe>
+            </div>
+            <p class="mt-4 text-sm font-body">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Frankfurter+Tor+9,+10243+Berlin" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors tracking-wide">
+                Open Route in Google Maps →
+              </a>
+            </p>
+            <p class="mt-3 text-sm text-muted-foreground font-body tracking-wide">
+              Public transit: U5 Frankfurter Tor (exit directly at the south tower). Parking: Underground garage at Kino Kosmos (Karl-Marx-Allee 131a).
+            </p>
+          </div>
+
+          <div class="mt-16 pt-12 border-t border-border space-y-4">
+            <p class="text-xs text-muted-foreground font-body tracking-wide">
+              © 2026 Alessandro &amp; Claudia · Post-Wedding Party · Frankfurter Tor 9 · 10243 Berlin
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FLOOR PLANS MODAL -->
+  <div id="floor-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="flex items-center justify-between border-b border-border pb-4 mb-6">
+        <div>
+          <h3 id="modal-heading" class="font-display text-2xl text-warm-white">Floor Plans &amp; Layout</h3>
+          <p id="modal-subheading" class="text-xs text-muted-foreground font-body mt-1">Tower Levels at Frankfurter Tor 9</p>
+        </div>
+        <button id="modal-close" class="text-muted-foreground hover:text-gold p-2 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <div class="flex gap-2 mb-6 border-b border-border/70 pb-3">
+        <button class="modal-tab text-xs tracking-wider uppercase px-4 py-2 rounded text-gold border border-gold bg-gold/10" data-tab="kuppelraum">Level 15 (Dome)</button>
+        <button class="modal-tab text-xs tracking-wider uppercase px-4 py-2 rounded text-muted-foreground border border-transparent hover:text-gold" data-tab="bar">Level 14 (Bar)</button>
+        <button class="modal-tab text-xs tracking-wider uppercase px-4 py-2 rounded text-muted-foreground border border-transparent hover:text-gold" data-tab="lounge">Level 13 (Lounge)</button>
+      </div>
+
+      <div id="modal-body" class="grid sm:grid-cols-2 gap-6"></div>
+    </div>
+  </div>
+
+  <script>
+    // Navigation toggle
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+
+    // Floor Plans Data
+    const floorPlans = {
+      kuppelraum: {
+        title: 'Level 15 — The Dome Room',
+        desc: '360° Panorama with wrap-around outdoor balcony. Dining & Dance Floor.',
+        items: [
+          { img: 'assets/plan-ebene15-DLRkEzdt.jpg', label: 'Festive Dining Setup' },
+          { img: 'assets/plan-ebene15-2-B1QLCcPo.jpg', label: 'Reception & Dance Floor Setup' },
+          { img: 'assets/plan-ebene15-1-BbSPH4mG.jpg', label: 'Lounge Seating Setup' },
+          { img: 'assets/plan-ebene15-3-CKXTy8Hu.jpg', label: 'Auditorium & Toast Setup' }
+        ]
+      },
+      bar: {
+        title: 'Level 14 — The Bar',
+        desc: 'Designer Bar with DJ station, counter, and direct spiral stairs to the dome.',
+        items: [
+          { img: 'assets/plan-ebene-14-DoLgWM0O.jpg', label: 'Floor Plan — Bar Level 14' }
+        ]
+      },
+      lounge: {
+        title: 'Level 13 — The Lounge Floor',
+        desc: 'Intimate retreat with Chesterfield seating, photo corner, and guestbook.',
+        items: [
+          { img: 'assets/plan-ebene-13-D53GTTE9.jpg', label: 'Floor Plan — Lounge Level 13' }
+        ]
+      }
+    };
+
+    const modal = document.getElementById('floor-modal');
+    const modalHeading = document.getElementById('modal-heading');
+    const modalSubheading = document.getElementById('modal-subheading');
+    const modalBody = document.getElementById('modal-body');
+    const modalClose = document.getElementById('modal-close');
+
+    function renderModal(floorKey) {
+      const data = floorPlans[floorKey];
+      if (!data) return;
+      modalHeading.textContent = data.title;
+      modalSubheading.textContent = data.desc;
+      modalBody.innerHTML = data.items.map(it => `
+        <div class="bg-secondary/40 border border-border/80 p-4 rounded text-center">
+          <div class="bg-background/60 p-3 mb-3 rounded flex items-center justify-center">
+            <img src="${it.img}" alt="${it.label}" class="max-h-56 max-w-full object-contain hover:scale-105 transition-transform duration-300">
+          </div>
+          <p class="text-xs font-body text-cream tracking-wide font-medium">${it.label}</p>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.modal-tab').forEach(tab => {
+        if (tab.dataset.tab === floorKey) {
+          tab.className = 'modal-tab text-xs tracking-wider uppercase px-4 py-2 rounded text-gold border border-gold bg-gold/10';
+        } else {
+          tab.className = 'modal-tab text-xs tracking-wider uppercase px-4 py-2 rounded text-muted-foreground border border-transparent hover:text-gold';
+        }
+      });
+    }
+
+    document.querySelectorAll('.floor-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const f = btn.dataset.floor || 'kuppelraum';
+        renderModal(f);
+        modal.classList.add('active');
+      });
+    });
+
+    document.querySelectorAll('.modal-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        renderModal(tab.dataset.tab);
+      });
+    });
+
+    if (modalClose) {
+      modalClose.addEventListener('click', () => modal.classList.remove('active'));
+    }
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
