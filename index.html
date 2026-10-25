@@ -16,9 +16,36 @@
     /* Smooth scrolling */
     html { scroll-behavior: smooth; }
 
+    /* Language switcher rules */
+    html[lang="it"] .lang-en {
+      display: none !important;
+    }
+    html[lang="en"] .lang-it {
+      display: none !important;
+    }
+    .lang-toggle-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: hsl(var(--muted-foreground));
+    }
+    .lang-toggle-btn.active {
+      background-color: hsl(var(--gold));
+      color: hsl(var(--primary-foreground));
+      font-weight: 600;
+    }
+    .lang-toggle-btn:not(.active):hover {
+      color: hsl(var(--gold));
+    }
+
     /* Responsive Navbar with explicit styles */
     .nav-desktop {
       display: none;
+    }
+    .mobile-nav-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
     .nav-toggle {
       display: flex;
@@ -40,7 +67,7 @@
         padding: 0.25rem 0.25rem;
         white-space: nowrap;
       }
-      .nav-toggle {
+      .mobile-nav-wrapper {
         display: none !important;
       }
     }
@@ -58,24 +85,47 @@
           
           <!-- Desktop Navigation -->
           <div class="nav-desktop text-xs tracking-[0.2em] uppercase font-body text-muted-foreground">
-            <a href="#invito" class="hover:text-gold transition-colors">L'Invito</a>
+            <span class="lang-it"><a href="#invito" class="hover:text-gold transition-colors">L'Invito</a></span>
+            <span class="lang-en"><a href="#invito" class="hover:text-gold transition-colors">The Invitation</a></span>
+            
             <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors font-medium">RSVP Form ↗</a>
-            <a href="#kontakt" class="hover:text-gold transition-colors">Location &amp; Info</a>
+            
+            <span class="lang-it"><a href="#kontakt" class="hover:text-gold transition-colors">Location &amp; Info</a></span>
+            <span class="lang-en"><a href="#kontakt" class="hover:text-gold transition-colors">Location &amp; Info</a></span>
+
+            <!-- Desktop Language Switcher -->
+            <div class="flex items-center border border-border/80 rounded-full p-0.5 ml-2 bg-card/60">
+              <button type="button" class="lang-toggle-btn px-2.5 py-0.5 rounded-full text-xs transition-all active" data-lang="it">IT</button>
+              <button type="button" class="lang-toggle-btn px-2.5 py-0.5 rounded-full text-xs transition-all" data-lang="en">EN</button>
+            </div>
           </div>
 
-          <!-- Mobile Hamburger Toggle -->
-          <button id="mobile-toggle" class="nav-toggle text-foreground p-1 hover:text-gold transition-colors" aria-label="Menu">
-            <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-            <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
+          <!-- Mobile Header Right: Switcher + Hamburger Toggle -->
+          <div class="mobile-nav-wrapper">
+            <div class="flex items-center border border-border/80 rounded-full p-0.5 bg-card/60">
+              <button type="button" class="lang-toggle-btn px-2 py-0.5 rounded-full text-xs transition-all active" data-lang="it">IT</button>
+              <button type="button" class="lang-toggle-btn px-2 py-0.5 rounded-full text-xs transition-all" data-lang="en">EN</button>
+            </div>
+
+            <button id="mobile-toggle" class="nav-toggle text-foreground p-1 hover:text-gold transition-colors" aria-label="Menu">
+              <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+              <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden bg-background/95 backdrop-blur-md border-b border-border">
           <ul class="flex flex-col items-center gap-4 py-6 text-xs tracking-[0.2em] uppercase font-body">
-            <li><a href="#invito" class="text-muted-foreground hover:text-gold transition-colors mobile-link">L'Invito</a></li>
+            <li>
+              <span class="lang-it"><a href="#invito" class="text-muted-foreground hover:text-gold transition-colors mobile-link">L'Invito</a></span>
+              <span class="lang-en"><a href="#invito" class="text-muted-foreground hover:text-gold transition-colors mobile-link">The Invitation</a></span>
+            </li>
             <li><a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors mobile-link font-medium">RSVP Form ↗</a></li>
-            <li><a href="#kontakt" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Location &amp; Info</a></li>
+            <li>
+              <span class="lang-it"><a href="#kontakt" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Location &amp; Info</a></span>
+              <span class="lang-en"><a href="#kontakt" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Location &amp; Info</a></span>
+            </li>
           </ul>
         </div>
       </nav>
@@ -87,7 +137,8 @@
         
         <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl animate-fade-in">
           <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6 font-body font-medium">
-            Frankfurter Tor 9 · 10243 Berlin · Sabato 12 Giugno 2027
+            <span class="lang-it">Frankfurter Tor 9 · 10243 Berlin · Sabato 12 Giugno 2027</span>
+            <span class="lang-en">Frankfurter Tor 9 · 10243 Berlin · Saturday, June 12, 2027</span>
           </p>
           <h1 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light leading-snug sm:leading-snug text-warm-white mb-4 sm:mb-6 drop-shadow-lg">
             Alessandro &amp; Claudia
@@ -98,7 +149,8 @@
           <div class="gold-line w-24 sm:w-32 mx-auto mb-6 sm:mb-8"></div>
           <div class="flex flex-wrap justify-center gap-4">
             <a href="#invito" class="inline-block px-8 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
-              L'Invito
+              <span class="lang-it">L'Invito</span>
+              <span class="lang-en">The Invitation</span>
             </a>
             <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-gold text-primary-foreground text-sm tracking-widest uppercase hover:bg-gold-light transition-all duration-500 font-medium">
               RSVP Form
@@ -116,31 +168,68 @@
             </div>
           </div>
           <div class="space-y-4">
-            <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold font-body font-medium">12 Giugno 2027</p>
-            <h2 class="font-display text-3xl md:text-5xl text-foreground">Cari amici,</h2>
-            <div class="gold-line w-16 my-4"></div>
-            <div class="text-secondary-foreground font-body font-light leading-relaxed space-y-4 text-sm sm:text-base">
-              <p>come sapete, a maggio 2026 abbiamo celebrato il nostro matrimonio con le nostre famiglie. Ma naturalmente, non ci siamo dimenticati di voi!</p>
-              <p>Per questo ci piacerebbe festeggiare questo nuovo capitolo della nostra vita insieme a tutti gli amici che ne fanno parte.</p>
-              <p>Vi invitiamo alla nostra festa a Berlino, nell’iconica cornice della Frankfurter Turm, per brindare insieme, mangiare, ballare e, soprattutto, divertirci!</p>
-              
-              <div class="p-4 sm:p-5 bg-card/70 border border-border/80 rounded my-3 space-y-1">
-                <p class="font-semibold text-warm-white text-base">Sabato 12 giugno 2027</p>
-                <p class="text-gold text-sm font-medium">Dalle 18:00 all’1:00</p>
-                <p class="text-xs text-muted-foreground">Frankfurter Turm, Berlino</p>
-              </div>
+            <!-- IT VERSION -->
+            <div class="lang-it space-y-4">
+              <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold font-body font-medium">12 Giugno 2027</p>
+              <h2 class="font-display text-3xl md:text-5xl text-foreground">Cari amici,</h2>
+              <div class="gold-line w-16 my-4"></div>
+              <div class="text-secondary-foreground font-body font-light leading-relaxed space-y-4 text-sm sm:text-base">
+                <p>come sapete, a maggio 2026 abbiamo celebrato il nostro matrimonio con le nostre famiglie. Ma naturalmente, non ci siamo dimenticati di voi!</p>
+                <p>Per questo ci piacerebbe festeggiare questo nuovo capitolo della nostra vita insieme a tutti gli amici che ne fanno parte.</p>
+                <p>Vi invitiamo alla nostra festa a Berlino, nell’iconica cornice della Frankfurter Turm, per brindare insieme, mangiare, ballare e, soprattutto, divertirci!</p>
+                
+                <div class="p-4 sm:p-5 bg-card/70 border border-border/80 rounded my-3 space-y-1">
+                  <p class="font-semibold text-warm-white text-base">Sabato 12 giugno 2027</p>
+                  <p class="text-gold text-sm font-medium">Dalle 18:00 all’1:00</p>
+                  <p class="text-xs text-muted-foreground">Frankfurter Turm, Berlino</p>
+                </div>
 
-              <p class="italic text-cream">E per chi vorrà continuare la serata, i festeggiamenti potranno proseguire anche dopo!</p>
-              <p>Vi chiediamo gentilmente di confermare la vostra presenza tramite il pulsante qui sotto, così da aiutarci a organizzare al meglio il catering e il bar.</p>
-              <p class="text-xs sm:text-sm text-muted-foreground">Per chi viene da fuori Berlino, una possibile opzione è il Numa Hotels, situato vicino alla location. Naturalmente, essendo in città, ci sono tante altre possibilità di alloggio.</p>
-              <p class="font-medium text-warm-white pt-2 text-base">Non vediamo l’ora di festeggiare con voi!</p>
+                <p class="italic text-cream">E per chi vorrà continuare la serata, i festeggiamenti potranno proseguire anche dopo!</p>
+                <p>Vi chiediamo gentilmente di confermare la vostra presenza tramite il pulsante qui sotto, così da aiutarci a organizzare al meglio il catering e il bar.</p>
+                <p class="text-xs sm:text-sm text-muted-foreground">
+                  Per chi viene da fuori Berlino, una possibile opzione è il <a href="https://numastays.com/it/locations/germany/berlin/friedrichshain/sketch/intimate?arrival=2027-06-11&departure=2027-06-13&adults=2&autoOpenCart=false&utm_source=google&utm_medium=cpc&utm_campaign=BrandSearch-DE-it&utm_content=Berlin-C-BrandSearch-DE-it&units=MS0wLTA=" target="_blank" rel="noopener noreferrer" class="text-gold underline underline-offset-4 hover:text-gold-light transition-colors font-medium">Numa Hotels</a>, situato vicino alla location. Naturalmente, essendo in città, ci sono tante altre possibilità di alloggio.
+                </p>
+                <p class="font-medium text-warm-white pt-2 text-base">Non vediamo l’ora di festeggiare con voi!</p>
+              </div>
+              <div class="pt-4">
+                <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 border border-gold text-gold text-xs sm:text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-body font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Conferma Presenza (Google Form)
+                </a>
+              </div>
             </div>
-            <div class="pt-4">
-              <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 border border-gold text-gold text-xs sm:text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-body font-medium">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                Conferma Presenza (Google Form)
-              </a>
+
+            <!-- EN VERSION -->
+            <div class="lang-en space-y-4">
+              <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold font-body font-medium">June 12, 2027</p>
+              <h2 class="font-display text-3xl md:text-5xl text-foreground">Dear friends,</h2>
+              <div class="gold-line w-16 my-4"></div>
+              <div class="text-secondary-foreground font-body font-light leading-relaxed space-y-4 text-sm sm:text-base">
+                <p>As you know, in May 2026 we celebrated our wedding with our families. But of course, we haven't forgotten about you!</p>
+                <p>That is why we would love to celebrate this new chapter of our life together with all the friends who are part of it.</p>
+                <p>We warmly invite you to our celebration in Berlin, set within the iconic Frankfurter Turm, to raise a glass together, enjoy good food, dance, and above all, have fun!</p>
+                
+                <div class="p-4 sm:p-5 bg-card/70 border border-border/80 rounded my-3 space-y-1">
+                  <p class="font-semibold text-warm-white text-base">Saturday, June 12, 2027</p>
+                  <p class="text-gold text-sm font-medium">From 6:00 PM to 1:00 AM</p>
+                  <p class="text-xs text-muted-foreground">Frankfurter Turm, Berlin</p>
+                </div>
+
+                <p class="italic text-cream">And for those who want to keep the party going, the night can continue afterwards!</p>
+                <p>We kindly ask you to confirm your attendance using the button below, to help us best plan the catering and the bar.</p>
+                <p class="text-xs sm:text-sm text-muted-foreground">
+                  For those traveling from outside Berlin, one convenient option is <a href="https://numastays.com/en/locations/germany/berlin/friedrichshain/sketch/intimate?arrival=2027-06-11&departure=2027-06-13&adults=2&autoOpenCart=false&utm_source=google&utm_medium=cpc&utm_campaign=BrandSearch-DE-it&utm_content=Berlin-C-BrandSearch-DE-it&units=MS0wLTA=" target="_blank" rel="noopener noreferrer" class="text-gold underline underline-offset-4 hover:text-gold-light transition-colors font-medium">Numa Hotels</a>, located close to the venue. Naturally, being in Berlin, there are plenty of other accommodation options available.
+                </p>
+                <p class="font-medium text-warm-white pt-2 text-base">We can't wait to celebrate with you!</p>
+              </div>
+              <div class="pt-4">
+                <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 border border-gold text-gold text-xs sm:text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-body font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  RSVP Form (Google Form)
+                </a>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -148,16 +237,21 @@
       <!-- RSVP -->
       <section id="anfrage" class="py-24 md:py-32 bg-card">
         <div class="max-w-3xl mx-auto px-6 text-center">
-          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">La Vostra Presenza</p>
+          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">
+            <span class="lang-it">La Vostra Presenza</span>
+            <span class="lang-en">Your Attendance</span>
+          </p>
           <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">RSVP</h2>
           <div class="gold-line w-16 mx-auto mb-6"></div>
           <p class="text-muted-foreground font-body font-light max-w-lg mx-auto mb-10 leading-relaxed">
-            Non vediamo l'ora di festeggiare con tutti voi! Vi chiediamo gentilmente di confermare la vostra presenza compilando il modulo qui sotto.
+            <span class="lang-it">Non vediamo l'ora di festeggiare con tutti voi! Vi chiediamo gentilmente di confermare la vostra presenza compilando il modulo qui sotto.</span>
+            <span class="lang-en">We can't wait to celebrate with you! Please kindly confirm your attendance by completing the form below.</span>
           </p>
           
           <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-10 py-4 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-4 w-4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Compila il modulo RSVP
+            <span class="lang-it">Compila il modulo RSVP</span>
+            <span class="lang-en">Complete RSVP Form</span>
           </a>
         </div>
       </section>
@@ -165,8 +259,14 @@
       <!-- DETAILS & LOCATION -->
       <section id="kontakt" class="py-24 md:py-32">
         <div class="max-w-4xl mx-auto px-6 text-center">
-          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Dettagli &amp; Coordinate</p>
-          <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">Location &amp; Orari</h2>
+          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">
+            <span class="lang-it">Dettagli &amp; Coordinate</span>
+            <span class="lang-en">Details &amp; Schedule</span>
+          </p>
+          <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">
+            <span class="lang-it">Location &amp; Orari</span>
+            <span class="lang-en">Location &amp; Schedule</span>
+          </h2>
           <div class="gold-line w-16 mx-auto mb-12"></div>
           
           <div class="grid md:grid-cols-2 gap-10 max-w-2xl mx-auto">
@@ -174,15 +274,28 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-6 w-6 text-gold mb-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
               <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
                 <p class="font-semibold text-foreground mb-2">Location</p>
-                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Frankfurter Turm</span><br>Lounge im Turm (Torre Sud)<br>Frankfurter Tor 9<br>10243 Berlin</p>
+                <div class="lang-it mb-3">
+                  <span class="text-xs uppercase tracking-wider text-gold">Frankfurter Turm</span><br>Lounge im Turm (Torre Sud)<br>Frankfurter Tor 9<br>10243 Berlin
+                </div>
+                <div class="lang-en mb-3">
+                  <span class="text-xs uppercase tracking-wider text-gold">Frankfurter Turm</span><br>Lounge im Turm (South Tower)<br>Frankfurter Tor 9<br>10243 Berlin
+                </div>
               </div>
             </div>
 
             <div class="flex flex-col items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-6 w-6 text-gold mb-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
               <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
-                <p class="font-semibold text-foreground mb-2">Data &amp; Programma</p>
-                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Sabato 12 Giugno 2027</span><br>Dalle 18:00 all’1:00<br><span class="italic text-xs text-cream">...e la festa continua dopo!</span></p>
+                <p class="font-semibold text-foreground mb-2">
+                  <span class="lang-it">Data &amp; Programma</span>
+                  <span class="lang-en">Date &amp; Schedule</span>
+                </p>
+                <div class="lang-it mb-3">
+                  <span class="text-xs uppercase tracking-wider text-gold">Sabato 12 Giugno 2027</span><br>Dalle 18:00 all’1:00<br><span class="italic text-xs text-cream">...e la festa continua dopo!</span>
+                </div>
+                <div class="lang-en mb-3">
+                  <span class="text-xs uppercase tracking-wider text-gold">Saturday, June 12, 2027</span><br>From 6:00 PM to 1:00 AM<br><span class="italic text-xs text-cream">...and the celebration continues afterwards!</span>
+                </div>
               </div>
             </div>
           </div>
@@ -193,11 +306,13 @@
             </div>
             <p class="mt-4 text-sm font-body">
               <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Frankfurter+Tor+9,+10243+Berlin" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors tracking-wide">
-                Apri su Google Maps →
+                <span class="lang-it">Apri su Google Maps →</span>
+                <span class="lang-en">Open in Google Maps →</span>
               </a>
             </p>
             <p class="mt-3 text-sm text-muted-foreground font-body tracking-wide">
-              Trasporti pubblici: U5 Frankfurter Tor (uscita diretta alla torre sud). Parcheggio: Garage Kino Kosmos (Karl-Marx-Allee 131a).
+              <span class="lang-it">Trasporti pubblici: U5 Frankfurter Tor (uscita diretta alla torre sud). Parcheggio: Garage Kino Kosmos (Karl-Marx-Allee 131a).</span>
+              <span class="lang-en">Public transit: U5 Frankfurter Tor (direct exit at south tower). Parking: Underground garage at Kino Kosmos (Karl-Marx-Allee 131a).</span>
             </p>
           </div>
 
@@ -213,7 +328,39 @@
   </div>
 
   <script>
-    // Navigation toggle
+    // Language Switcher Logic (Default: 'it')
+    function setLanguage(lang) {
+      const selected = (lang === 'en') ? 'en' : 'it';
+      document.documentElement.lang = selected;
+      try {
+        localStorage.setItem('site_lang', selected);
+      } catch (e) {}
+
+      document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === selected) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Initialize Language from localStorage (default to 'it')
+    let currentLang = 'it';
+    try {
+      currentLang = localStorage.getItem('site_lang') || 'it';
+    } catch (e) {}
+    setLanguage(currentLang);
+
+    // Event listeners for all language switcher buttons (desktop & mobile)
+    document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+
+    // Navigation mobile toggle
     const toggleBtn = document.getElementById('mobile-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const iconMenu = document.getElementById('icon-menu');
