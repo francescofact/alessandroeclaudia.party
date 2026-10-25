@@ -71,6 +71,28 @@
         display: none !important;
       }
     }
+
+    /* Hero RSVP Button */
+    .hero-btn {
+      display: inline-block;
+      min-width: 220px;
+      padding: 0.85rem 2.5rem;
+      border: 1px solid hsl(var(--gold));
+      color: hsl(var(--gold));
+      font-size: 0.875rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.5s ease;
+      background: rgba(10, 20, 40, 0.4);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .hero-btn:hover {
+      background-color: hsl(var(--gold));
+      color: hsl(var(--primary-foreground));
+    }
   </style>
 </head>
 
@@ -148,7 +170,7 @@
           </h1>
           <div class="gold-line w-24 sm:w-32 mx-auto mb-6 sm:mb-8"></div>
           <div class="flex justify-center mt-6 sm:mt-8">
-            <a href="#anfrage" class="inline-block px-12 sm:px-16 py-4 sm:py-4.5 border border-gold text-gold text-sm sm:text-base tracking-[0.25em] uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
+            <a href="#anfrage" class="hero-btn">
               RSVP
             </a>
           </div>
