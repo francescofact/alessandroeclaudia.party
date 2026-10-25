@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="it" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alessandro & Claudia — Wedding Party · Lounge im Turm Berlin</title>
-  <meta name="description" content="Alessandro & Claudia are celebrating their wedding party with friends in the Lounge im Turm at Frankfurter Tor 9, Berlin.">
+  <title>Alessandro &amp; Claudia — Wedding Party · Frankfurter Turm Berlin</title>
+  <meta name="description" content="Alessandro &amp; Claudia festeggiano con gli amici nella Frankfurter Turm a Berlino. Sabato 12 Giugno 2027.">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Alessandro & Claudia — Wedding Party">
-  <meta property="og:description" content="Join us for a celebration above the rooftops of Berlin on Saturday, September 19, 2026.">
+  <meta property="og:title" content="Alessandro &amp; Claudia — Wedding Party">
+  <meta property="og:description" content="Vi invitiamo alla nostra festa a Berlino, nell'iconica cornice della Frankfurter Turm. Sabato 12 Giugno 2027.">
   <meta property="og:image" content="assets/hero-frankfurter-tor-DvXe2A3Z.jpg">
   
   <link rel="stylesheet" crossorigin="" href="assets/style.css">
@@ -58,8 +58,9 @@
           
           <!-- Desktop Navigation -->
           <div class="nav-desktop text-xs tracking-[0.2em] uppercase font-body text-muted-foreground">
+            <a href="#invito" class="hover:text-gold transition-colors">L'Invito</a>
             <a href="#anfrage" class="text-gold hover:text-gold-light transition-colors font-medium">RSVP</a>
-            <a href="#kontakt" class="hover:text-gold transition-colors">Details &amp; Location</a>
+            <a href="#kontakt" class="hover:text-gold transition-colors">Location &amp; Info</a>
           </div>
 
           <!-- Mobile Hamburger Toggle -->
@@ -72,8 +73,9 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden bg-background/95 backdrop-blur-md border-b border-border">
           <ul class="flex flex-col items-center gap-4 py-6 text-xs tracking-[0.2em] uppercase font-body">
+            <li><a href="#invito" class="text-muted-foreground hover:text-gold transition-colors mobile-link">L'Invito</a></li>
             <li><a href="#anfrage" class="text-gold hover:text-gold-light transition-colors mobile-link font-medium">RSVP</a></li>
-            <li><a href="#kontakt" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Details &amp; Location</a></li>
+            <li><a href="#kontakt" class="text-muted-foreground hover:text-gold transition-colors mobile-link">Location &amp; Info</a></li>
           </ul>
         </div>
       </nav>
@@ -85,7 +87,7 @@
         
         <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl animate-fade-in">
           <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6 font-body font-medium">
-            Frankfurter Tor 9 · 10243 Berlin · Saturday, September 19, 2026
+            Frankfurter Tor 9 · 10243 Berlin · Sabato 12 Giugno 2027
           </p>
           <h1 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light leading-snug sm:leading-snug text-warm-white mb-4 sm:mb-6 drop-shadow-lg">
             Alessandro &amp; Claudia
@@ -94,25 +96,67 @@
             </span>
           </h1>
           <div class="gold-line w-24 sm:w-32 mx-auto mb-6 sm:mb-8"></div>
-          <a href="#anfrage" class="inline-block mt-4 sm:mt-6 px-8 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
-            RSVP &amp; Details
-          </a>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#invito" class="inline-block px-8 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
+              L'Invito
+            </a>
+            <a href="#anfrage" class="inline-block px-8 py-3 bg-gold text-primary-foreground text-sm tracking-widest uppercase hover:bg-gold-light transition-all duration-500 font-medium">
+              RSVP
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- INVITO / LETTERA CON FOTO KUPPELRAUM -->
+      <section id="invito" class="py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div>
+            <div class="overflow-hidden rounded border border-border shadow-2xl">
+              <img src="assets/kuppelraum-DVxYrUW8.jpg" alt="Frankfurter Turm — Kuppelraum" loading="lazy" class="w-full h-[450px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold font-body font-medium">12 Giugno 2027</p>
+            <h2 class="font-display text-3xl md:text-5xl text-foreground">Cari amici,</h2>
+            <div class="gold-line w-16 my-4"></div>
+            <div class="text-secondary-foreground font-body font-light leading-relaxed space-y-4 text-sm sm:text-base">
+              <p>come sapete, a maggio 2026 abbiamo celebrato il nostro matrimonio con le nostre famiglie. Ma naturalmente, non ci siamo dimenticati di voi!</p>
+              <p>Per questo ci piacerebbe festeggiare questo nuovo capitolo della nostra vita insieme a tutti gli amici che ne fanno parte.</p>
+              <p>Vi invitiamo alla nostra festa a Berlino, nell’iconica cornice della Frankfurter Turm, per brindare insieme, mangiare, ballare e, soprattutto, divertirci!</p>
+              
+              <div class="p-4 sm:p-5 bg-card/70 border border-border/80 rounded my-3 space-y-1">
+                <p class="font-semibold text-warm-white text-base">Sabato 12 giugno 2027</p>
+                <p class="text-gold text-sm font-medium">Dalle 18:00 all’1:00</p>
+                <p class="text-xs text-muted-foreground">Frankfurter Turm, Berlino</p>
+              </div>
+
+              <p class="italic text-cream">E per chi vorrà continuare la serata, i festeggiamenti potranno proseguire anche dopo!</p>
+              <p>Vi chiediamo gentilmente di confermare la vostra presenza tramite il pulsante qui sotto, così da aiutarci a organizzare al meglio il catering e il bar.</p>
+              <p class="text-xs sm:text-sm text-muted-foreground">Per chi viene da fuori Berlino, una possibile opzione è il Numa Hotels, situato vicino alla location. Naturalmente, essendo in città, ci sono tante altre possibilità di alloggio.</p>
+              <p class="font-medium text-warm-white pt-2 text-base">Non vediamo l’ora di festeggiare con voi!</p>
+            </div>
+            <div class="pt-2">
+              <a href="#anfrage" class="inline-flex items-center gap-2 text-xs sm:text-sm tracking-widest uppercase text-gold hover:text-gold-light transition-colors font-body font-medium">
+                Conferma Presenza (RSVP) →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- RSVP -->
       <section id="anfrage" class="py-24 md:py-32 bg-card">
         <div class="max-w-3xl mx-auto px-6 text-center">
-          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Your Attendance</p>
+          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">La Vostra Presenza</p>
           <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">RSVP</h2>
           <div class="gold-line w-16 mx-auto mb-6"></div>
           <p class="text-muted-foreground font-body font-light max-w-lg mx-auto mb-10 leading-relaxed">
-            We can't wait to celebrate with you! Please let us know if you will be joining us by August 15, 2026 by completing our quick RSVP form.
+            Non vediamo l'ora di festeggiare con tutti voi! Vi chiediamo gentilmente di confermare la vostra presenza compilando il modulo qui sotto.
           </p>
           
           <a href="https://forms.gle/eWB63AVWkqBuzZPz5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-10 py-4 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-primary-foreground transition-all duration-500 font-medium">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-4 w-4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Complete RSVP Form
+            Compila il modulo RSVP
           </a>
         </div>
       </section>
@@ -120,53 +164,45 @@
       <!-- DETAILS & LOCATION -->
       <section id="kontakt" class="py-24 md:py-32">
         <div class="max-w-4xl mx-auto px-6 text-center">
-          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">We Look Forward To Celebrating With You</p>
-          <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">Event Details &amp; Location</h2>
+          <p class="text-sm tracking-[0.3em] uppercase text-gold mb-3 font-body font-medium">Dettagli &amp; Coordinate</p>
+          <h2 class="font-display text-4xl md:text-5xl text-foreground mb-4">Location &amp; Orari</h2>
           <div class="gold-line w-16 mx-auto mb-12"></div>
           
-          <div class="grid md:grid-cols-3 gap-10">
+          <div class="grid md:grid-cols-2 gap-10 max-w-2xl mx-auto">
             <div class="flex flex-col items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-6 w-6 text-gold mb-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
               <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
-                <p class="font-semibold text-foreground mb-2">Alessandro &amp; Claudia</p>
-                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Venue</span><br>Lounge im Turm (South Tower)<br>Frankfurter Tor 9<br>10243 Berlin</p>
+                <p class="font-semibold text-foreground mb-2">Location</p>
+                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Frankfurter Turm</span><br>Lounge im Turm (Torre Sud)<br>Frankfurter Tor 9<br>10243 Berlin</p>
               </div>
             </div>
 
             <div class="flex flex-col items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-6 w-6 text-gold mb-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
               <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
-                <p class="font-semibold text-foreground mb-2">Date &amp; Schedule</p>
-                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Saturday, Sept 19, 2026</span><br>From 6:30 PM until Late<br>Dress Code: Cocktail Chic</p>
-              </div>
-            </div>
-
-            <div class="flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-6 w-6 text-gold mb-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-              <div class="font-body text-sm text-muted-foreground leading-relaxed text-center">
-                <p class="font-semibold text-foreground mb-2">Contact</p>
-                <a href="mailto:alessandro.claudia.wedding@gmail.com" class="font-body text-sm text-gold hover:text-gold-light transition-colors">alessandro.claudia.wedding@gmail.com</a>
+                <p class="font-semibold text-foreground mb-2">Data &amp; Programma</p>
+                <p class="mb-3"><span class="text-xs uppercase tracking-wider text-gold">Sabato 12 Giugno 2027</span><br>Dalle 18:00 all’1:00<br><span class="italic text-xs text-cream">...e la festa continua dopo!</span></p>
               </div>
             </div>
           </div>
 
           <div class="mt-16">
             <div class="overflow-hidden border border-border shadow-lg">
-              <iframe title="Lageplan Lounge im Turm — Frankfurter Tor 9, Berlin" src="https://www.google.com/maps?q=Frankfurter+Tor+9,+10243+Berlin&amp;output=embed" width="100%" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" style="border: 0px;"></iframe>
+              <iframe title="Mappa Lounge im Turm — Frankfurter Tor 9, Berlin" src="https://www.google.com/maps?q=Frankfurter+Tor+9,+10243+Berlin&amp;output=embed" width="100%" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" style="border: 0px;"></iframe>
             </div>
             <p class="mt-4 text-sm font-body">
               <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Frankfurter+Tor+9,+10243+Berlin" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors tracking-wide">
-                Open Route in Google Maps →
+                Apri su Google Maps →
               </a>
             </p>
             <p class="mt-3 text-sm text-muted-foreground font-body tracking-wide">
-              Public transit: U5 Frankfurter Tor (exit directly at the south tower). Parking: Underground garage at Kino Kosmos (Karl-Marx-Allee 131a).
+              Trasporti pubblici: U5 Frankfurter Tor (uscita diretta alla torre sud). Parcheggio: Garage Kino Kosmos (Karl-Marx-Allee 131a).
             </p>
           </div>
 
           <div class="mt-16 pt-12 border-t border-border space-y-4">
             <p class="text-xs text-muted-foreground font-body tracking-wide">
-              © 2026 Alessandro &amp; Claudia · Wedding Party · Frankfurter Tor 9 · 10243 Berlin
+              © 2027 Alessandro &amp; Claudia · Wedding Party · Frankfurter Tor 9 · 10243 Berlin
             </p>
           </div>
         </div>
